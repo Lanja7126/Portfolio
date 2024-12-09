@@ -1,0 +1,24 @@
+@mixin font-size-color($fs,$lh,$fw,$color,$uppercase){
+    font-size: $fs;
+    line-height: $lh;
+    font-weight: $fw;
+    color: $color;
+    @if $uppercase==true {
+        text-transform: uppercase;
+    }
+    @else if $uppercase==false{
+        text-transform: lowercase;
+    }
+}
+@mixin respond-to($breakpoint){
+    @if $breakpoint == 'tablette'{
+        @media screen and (max-width=$tablette){
+            @content;
+        }
+    }
+    @else if $breakpoint == 'mobile'{
+        @media screen and (max-width=$mobile){
+            @content;
+        }
+    }
+}

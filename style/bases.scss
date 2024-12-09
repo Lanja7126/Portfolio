@@ -1,0 +1,13 @@
+body{
+    display: flex;
+    background-color: $body-background;
+}
+html{
+    scroll-behavior: smooth;
+}
+i{
+    color: $primary-color;
+}
+ul{
+    padding: 0;
+}

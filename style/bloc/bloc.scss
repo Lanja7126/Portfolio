@@ -1,0 +1,19 @@
+.bloc{
+    margin-left: $top-bar-width + 50px;
+    justify-content: center;
+}
+section{
+    padding: 5rem;
+    background-color: $section-background; 
+    border-bottom: $body-background solid 10px;
+    animation: reveal;
+    animation-timeline: view();
+    animation-range-start: cover(0);
+    animation-range-end: contain(0%)
+}
+main section:first-child{
+    border-top-left-radius: 25px;
+}
+main section:last-child{
+    border-bottom-right-radius: 25px;
+}

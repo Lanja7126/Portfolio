@@ -1,0 +1,33 @@
+.top-bar{
+    width: $top-bar-width;
+    height: auto;
+    background-color:#1a1a1a ;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    img{
+        width: 210px;
+        height: 210px;
+        border-radius: 100%;
+    }
+    .menu {
+        list-style-type: none;
+        
+        li a{
+            display: flex;
+            width: 100%;
+            padding: 10%;
+            text-decoration: none;
+            color: #4c9c89;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+                border-bottom: gray solid 2px transition 1s;
+            }
+            @include font-size-color(18px,18px,700,#4c9c89,false)
+        }
+    }
+    
+}
