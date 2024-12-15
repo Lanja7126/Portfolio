@@ -16,7 +16,7 @@
         list-style-type: none;
         
         li a{
-            display: flex;
+            display: block;
             width: 100%;
             padding: 10%;
             text-decoration: none;
@@ -26,7 +26,6 @@
             &:hover{
                 border-bottom: gray solid 2px transition 1s;
             }
-            @include font-size-color(18px,18px,700,#4c9c89,false)
         }
     }
     

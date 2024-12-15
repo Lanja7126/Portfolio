@@ -9,10 +9,37 @@ section{
     animation: reveal;
     animation-timeline: view();
     animation-range-start: cover(0);
-    animation-range-end: contain(0%)
+    animation-range-end: contain(0%);
+    @include respond-to ('tablette'){
+        width: 100%;
+    }
+    @include respond-to ('mobile'){
+        width: 100%;
+    }
+    h1{
+        @include font-size-color(35px,40px,400,$primary-color,true);
+        @import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Playwrite+MX+Guides&display=swap');
+        font-family: "Agu Display", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-variation-settings:
+            "MORF" 0;
+        @include respond-to ('tablette'){
+            @include font-size-color(18px,18px,600,$primary-color,false);
+        }
+    }
+    p{
+        @include font-size-color(20px,20px,100,black,false);
+        @import url(https://signstd.com/product/elagra/);
+        font-family: elagra;
+    }
+    form{
+        color: $primary-color;
+    }
 }
 main section:first-child{
     border-top-left-radius: 25px;
+   
 }
 main section:last-child{
     border-bottom-right-radius: 25px;
