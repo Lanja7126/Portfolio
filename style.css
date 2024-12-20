@@ -43,7 +43,7 @@ html {
 }
 
 i {
-  color: blue;
+  color: white;
 }
 
 ul {
@@ -149,9 +149,6 @@ ul {
 .top-bar .menu li a:focus {
   outline: none;
 }
-.top-bar .menu li a i {
-  color: azure;
-}
 .top-bar .toggle-btn {
   display: none;
   background: none;
@@ -217,6 +214,18 @@ section h1 {
     color: #4c9c89;
     text-transform: lowercase;
   }
+}
+section h2 {
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 400px;
+  color: #bfbfbf;
+  text-transform: uppercase;
+  @import url("https://fonts.googleapis.com/css2?family=Agu+Display&family=Playwrite+MX+Guides&display=swap");
+  font-family: "Agu Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "MORF" 0;
 }
 section p {
   font-size: 20px;
@@ -324,15 +333,10 @@ section .bloc-7:hover {
   flex-wrap: wrap;
 }
 .me-contacter li a {
-  color: blue;
+  color: azure;
 }
-.me-contacter .me_parler {
-  margin-left: 0px;
-}
-.me-contacter .me_parler input {
-  padding: 2rem;
-  width: 600px;
-  border-radius: 20px;
+.me-contacter li a:hover {
+  color: rgb(178.5, 178.5, 178.5);
 }
 
 /*# sourceMappingURL=style.css.map */

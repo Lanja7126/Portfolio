@@ -34,6 +34,15 @@ section{
             @include font-size-color(18px,18px,600,$primary-color,false);
         }
     }
+    h2{
+        @include font-size-color(20px,25px,400px,$section-background,true);
+        @import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Playwrite+MX+Guides&display=swap');
+        font-family: "Agu Display", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-variation-settings:
+            "MORF" 0;
+    }
     p{ font-size: 20px;
         line-height: 20px;
         font-weight: 100;
@@ -75,14 +84,10 @@ section{
     display: flex;
     flex-wrap: wrap;
     li a {
-        color: blue;
-    }
-    & .me_parler{
-        margin-left: 0px;
-        & input{
-            padding: 2rem;
-            width: 600px;
-            border-radius: 20px;
+        color: azure;;
+        &:hover{
+            color: darken(white,30%);
         }
     }
-}
+    
+    }
