@@ -11,13 +11,18 @@
     }
 }
 @mixin respond-to($breakpoint){
-    @if $breakpoint == 'tablette'{
-        @media screen and (max-width=$tablette){
+    @if $breakpoint == 'medium'{
+        @media screen and (max-width:$medium){
+            @content;
+        }
+    }
+    @else if $breakpoint == 'tablette'{
+        @media screen and (max-width:$tablette){
             @content;
         }
     }
     @else if $breakpoint == 'mobile'{
-        @media screen and (max-width=$mobile){
+        @media screen and (max-width:$mobile){
             @content;
         }
     }

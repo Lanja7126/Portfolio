@@ -1,21 +1,27 @@
 .bloc{
-    margin-left: $top-bar-width + 50px;
+    margin:0 auto 0 $top-bar-width ;
     justify-content: center;
+    
 }
 section{
-    padding: 5rem;
-    background-color: $section-background; 
+    padding: 2rem;
+    background-color: #1a1a1a; 
     border-bottom: $body-background solid 10px;
     animation: reveal;
     animation-timeline: view();
     animation-range-start: cover(0);
     animation-range-end: contain(0%);
+    @include respond-to ('medium'){
+        width:100%;
+    }
     @include respond-to ('tablette'){
-        width: 100%;
+        width:100%;
     }
     @include respond-to ('mobile'){
-        width: 100%;
+
+        width:100%;
     }
+    box-shadow: 2px black;
     h1{
         @include font-size-color(35px,40px,400,$primary-color,true);
         @import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Playwrite+MX+Guides&display=swap');
@@ -28,19 +34,55 @@ section{
             @include font-size-color(18px,18px,600,$primary-color,false);
         }
     }
-    p{
-        @include font-size-color(20px,20px,100,black,false);
+    p{ font-size: 20px;
+        line-height: 20px;
+        font-weight: 100;
+        color: whitesmoke;
+       
         @import url(https://signstd.com/product/elagra/);
         font-family: elagra;
     }
     form{
         color: $primary-color;
     }
+    &:first-child{
+        border-top-left-radius: 25px;
+       
+    }
+    &:last-child{
+        border-bottom-right-radius: 25px;
+        margin-bottom: 300px;
+    }
+    @for $i from 1 through 7{
+        .bloc-#{$i}{
+            display: block;
+            padding: 2rem;
+            background-color: $primary-color;
+            margin: auto;
+            border-radius: 20px;
+            cursor: pointer;
+            &:hover{
+                background-color: azure;
+            }
+        }
+    }
 }
-main section:first-child{
-    border-top-left-radius: 25px;
-   
+.skills{
+    display: flex;
+    flex-wrap: wrap;
 }
-main section:last-child{
-    border-bottom-right-radius: 25px;
+.me-contacter{
+    display: flex;
+    flex-wrap: wrap;
+    li a {
+        color: blue;
+    }
+    & .me_parler{
+        margin-left: 0px;
+        & input{
+            padding: 2rem;
+            width: 600px;
+            border-radius: 20px;
+        }
+    }
 }

@@ -2,11 +2,14 @@ body{
     display: flex;
     background-color: $body-background;
 }
+main{
+    width: 1316px - $top-bar-width;
+}
 html{
     scroll-behavior: smooth;
 }
 i{
-    color: $primary-color;
+    color: blue;
 }
 ul{
     padding: 0;

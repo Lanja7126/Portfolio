@@ -9,13 +9,33 @@ h1 {
     transform: scale(0);
   }
   to {
-    opacity: 2;
+    opacity: 1;
     transform: scale(1);
   }
 }
+main section a {
+  text-decoration: none;
+  padding: 8px;
+  color: #4c9c89;
+  display: block;
+  margin-bottom: 10px;
+}
+main section a:hover {
+  color: #f0f0f0;
+  transition: 1s;
+}
+
+main section ul {
+  list-style-type: none;
+}
+
 body {
   display: flex;
-  background-color: #d9d9d9;
+  background-color: #f0f0f0;
+}
+
+main {
+  width: 1083px;
 }
 
 html {
@@ -23,7 +43,7 @@ html {
 }
 
 i {
-  color: #4c9c89;
+  color: blue;
 }
 
 ul {
@@ -32,21 +52,86 @@ ul {
 
 .top-bar {
   width: 233px;
-  height: auto;
   background-color: #1a1a1a;
-  padding: 20px;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
+  text-align: center;
+}
+@media screen and (max-width: 1200px) {
+  .top-bar {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .top-bar {
+    width: 130px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .top-bar {
+    width: 100px;
+  }
 }
 .top-bar img {
-  width: 210px;
-  height: 210px;
+  width: 230px;
+  height: 230px;
   border-radius: 100%;
 }
+@media screen and (max-width: 1200px) {
+  .top-bar img {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .top-bar img {
+    width: 130px;
+    height: 130px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .top-bar img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .top-bar {
+    background-color: #f0f0f0;
+  }
+}
 .top-bar .menu {
-  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+@media screen and (max-width: 1200px) {
+  .top-bar .menu {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .top-bar .menu {
+    width: 130px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .top-bar .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    width: 100px;
+  }
+  .top-bar .menu.active {
+    display: flex;
+  }
+}
+.top-bar .menu li {
+  text-align: center;
+  margin: 10px 0;
 }
 .top-bar .menu li a {
   display: block;
@@ -56,31 +141,58 @@ ul {
   color: #4c9c89;
   justify-content: center;
   align-items: center;
+  transition: color 0.3s ease;
 }
 .top-bar .menu li a:hover {
-  border-bottom: gray solid 2px transition 1s;
+  color: #f0f0f0;
+}
+.top-bar .menu li a:focus {
+  outline: none;
+}
+.top-bar .menu li a i {
+  color: azure;
+}
+.top-bar .toggle-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #4c9c89;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .top-bar .toggle-btn {
+    display: block;
+    margin: 10px auto;
+  }
 }
 
 .bloc {
-  margin-left: 283px;
+  margin: 0 auto 0 233px;
   justify-content: center;
 }
 
 section {
-  padding: 5rem;
-  background-color: #bfbfbf;
-  border-bottom: #d9d9d9 solid 10px;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  border-bottom: #f0f0f0 solid 10px;
   animation: reveal;
   animation-timeline: view();
   animation-range-start: cover(0);
   animation-range-end: contain(0%);
+  box-shadow: 2px black;
 }
-@media screen and (max-width = 992px) {
+@media screen and (max-width: 1200px) {
   section {
     width: 100%;
   }
 }
-@media screen and (max-width = 768px) {
+@media screen and (max-width: 992px) {
+  section {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
   section {
     width: 100%;
   }
@@ -97,7 +209,7 @@ section h1 {
   font-style: normal;
   font-variation-settings: "MORF" 0;
 }
-@media screen and (max-width = 992px) {
+@media screen and (max-width: 992px) {
   section h1 {
     font-size: 18px;
     line-height: 18px;
@@ -110,21 +222,117 @@ section p {
   font-size: 20px;
   line-height: 20px;
   font-weight: 100;
-  color: black;
-  text-transform: lowercase;
+  color: whitesmoke;
   @import url(https://signstd.com/product/elagra/);
   font-family: elagra;
 }
 section form {
   color: #4c9c89;
 }
-
-main section:first-child {
+section:first-child {
   border-top-left-radius: 25px;
 }
-
-main section:last-child {
+section:last-child {
   border-bottom-right-radius: 25px;
+  margin-bottom: 300px;
+}
+section .bloc-1 {
+  display: block;
+  padding: 2rem;
+  background-color: #4c9c89;
+  margin: auto;
+  border-radius: 20px;
+  cursor: pointer;
+}
+section .bloc-1:hover {
+  background-color: azure;
+}
+section .bloc-2 {
+  display: block;
+  padding: 2rem;
+  background-color: #4c9c89;
+  margin: auto;
+  border-radius: 20px;
+  cursor: pointer;
+}
+section .bloc-2:hover {
+  background-color: azure;
+}
+section .bloc-3 {
+  display: block;
+  padding: 2rem;
+  background-color: #4c9c89;
+  margin: auto;
+  border-radius: 20px;
+  cursor: pointer;
+}
+section .bloc-3:hover {
+  background-color: azure;
+}
+section .bloc-4 {
+  display: block;
+  padding: 2rem;
+  background-color: #4c9c89;
+  margin: auto;
+  border-radius: 20px;
+  cursor: pointer;
+}
+section .bloc-4:hover {
+  background-color: azure;
+}
+section .bloc-5 {
+  display: block;
+  padding: 2rem;
+  background-color: #4c9c89;
+  margin: auto;
+  border-radius: 20px;
+  cursor: pointer;
+}
+section .bloc-5:hover {
+  background-color: azure;
+}
+section .bloc-6 {
+  display: block;
+  padding: 2rem;
+  background-color: #4c9c89;
+  margin: auto;
+  border-radius: 20px;
+  cursor: pointer;
+}
+section .bloc-6:hover {
+  background-color: azure;
+}
+section .bloc-7 {
+  display: block;
+  padding: 2rem;
+  background-color: #4c9c89;
+  margin: auto;
+  border-radius: 20px;
+  cursor: pointer;
+}
+section .bloc-7:hover {
+  background-color: azure;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.me-contacter {
+  display: flex;
+  flex-wrap: wrap;
+}
+.me-contacter li a {
+  color: blue;
+}
+.me-contacter .me_parler {
+  margin-left: 0px;
+}
+.me-contacter .me_parler input {
+  padding: 2rem;
+  width: 600px;
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
